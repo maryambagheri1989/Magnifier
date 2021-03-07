@@ -40,7 +40,7 @@ import ptolemy.kernel.util.NamedObj;
 /** A receiver for modeling air traffic control systems.
  *  This receiver checks the containing actor, and if it can reject inputs,
  *  then uses it to determine whether to accept a token.
- *  @author Marjan Sirjani and Edward A. Lee
+ *  @author Maryam Bagheri
  *  @version $Id$
  *  @since Ptolemy II 11.0
  */
