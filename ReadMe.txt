@@ -2,7 +2,7 @@
 2-	Go to the directory of your installation, then ptolemy/domains,
 3-	Replace the atc folder with our atc folder,
 4-	Note that we have changed several parameters of the DE director and the SDF director from private/protected to public. 
-	Therefore, replace the DEDirector.class (and .java) and SDFDirector.class (and .java) with the previous ones,
+	Therefore, replace the DEDirector.java and SDFDirector.java with the previous ones,
 5-	Invoke the vergil,
 6-	After coming vergil up, go to the atc/demo/FirstPolicy and select a model. 
 
