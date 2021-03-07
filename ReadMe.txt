@@ -28,7 +28,7 @@ To execute the model for the second time, remove outputS1.txt if created any.
 
 Note that we executed the code using an Ubuntu machine. To calculate the execution time in Ubuntu we used "time" shell command.
 
-Do not hesitate to contact maryam.bagheri1989@gmail.com if you have any problem.
+Do not hesitate to contact maryam.bagheri1989@gmail.com if you have any problem. You can download the .class files from http://www.ce.sharif.ir/~mbagheri/MagImp.zip.
 
 Good Luck,
 Maryam Bagheri.
