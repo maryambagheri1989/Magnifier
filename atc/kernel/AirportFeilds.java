@@ -1,0 +1,69 @@
+package ptolemy.domains.atc.kernel;
+
+import java.util.ArrayList;
+
+import ptolemy.actor.util.Time;
+import ptolemy.data.IntToken;
+import ptolemy.data.RecordToken;
+import ptolemy.data.Token;
+
+public class AirportFeilds {
+    public AirportFeilds(ArrayList<RecordToken> _airplanes, Token _inTransit, Time _transitExpires) {
+        super();
+        this._airplanes=new ArrayList<RecordToken>();
+        for(int i=0;i<_airplanes.size();i++)
+            this._airplanes.add(_airplanes.get(i));
+        this._inTransit = _inTransit;
+        this._transitExpires = _transitExpires;
+    }
+    public ArrayList<RecordToken> _airplanes;
+    public Token _inTransit;
+    public Time _transitExpires;
+    
+//    @Override
+//    public int hashCode() {
+//        final int prime = 31;
+//        int result = 1;
+//        result = prime * result + ((_airplanes == null) ? 0 : _airplanes.size());
+//        result = prime * result + ((_inTransit == null) ? 0 : ((IntToken)((RecordToken)_inTransit).get("aircraftId")).intValue());
+//        result = prime * result + ((_transitExpires == null) ? 0 : _transitExpires.hashCode());
+//        return result;
+//    }
+
+    @Override
+    public boolean equals(Object e) {
+        if(e instanceof AirportFeilds) {
+            if((((AirportFeilds) e)._inTransit!=null && this._inTransit==null)||
+                    (((AirportFeilds) e)._inTransit==null && this._inTransit!=null))
+                return false;
+            if((((AirportFeilds) e)._inTransit!=null && this._inTransit!=null) &&
+                    !((AirportFeilds) e)._inTransit.equals(this._inTransit))
+              return false;
+//                    {
+//                if(((IntToken)(((RecordToken)((AirportFeilds) e)._inTransit).get("aircraftId"))).intValue()!=((IntToken)((RecordToken)this._inTransit).get("aircraftId")).intValue())
+//                    return false;
+//                if(!((RecordToken)((AirportFeilds) e)._inTransit).get("flightMap").equals(((RecordToken)this._inTransit).get("flightMap")))
+//                    return false;
+//                }
+//                   
+
+            if((((AirportFeilds) e)._transitExpires!=null && this._transitExpires==null)
+                    ||(((AirportFeilds) e)._transitExpires==null && this._transitExpires!=null))
+                return false;
+            if((((AirportFeilds) e)._transitExpires!=null && this._transitExpires!=null) &&
+                    !((AirportFeilds) e)._transitExpires.equals(this._transitExpires))
+                return false;
+            if(this._airplanes.size()!= ((AirportFeilds) e)._airplanes.size())
+                return false;
+            for(int i=0;i<this._airplanes.size();i++)
+                if(!((AirportFeilds) e)._airplanes.contains(this._airplanes.get(i)))
+                    return false;
+//            if(!this._airplanes.equals(((AirportFeilds) e)._airplanes))
+//                return false;
+        }
+        return true;
+    }
+    
+    
+    
+}
